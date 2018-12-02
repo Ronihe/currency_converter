@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}Converting Form{% endblock %}
+
+{% block content %}
+
+<form>
+    <label for="convert_from">Convert From</label> <input name="convert_from" type="text">
+    <label for="convert_to">Convert To</label> <input name="convert_to" type="text">
+    <label for="amount">Amount</label> <input name="amount" type="number" value="0">
+    <button  value="submit" id="submit"> Converting ...</button>
+    <div id="converted_result"></div>
+</form>
+
+<h2>Calculating List</h2>
+<ol id="calculated_list">
+</ol>
+
+
+<script type="text/javascript" src="{{ url_for('static', filename = 'script.js') }}"></script>
+{% endblock %}
