@@ -9,8 +9,13 @@ $(function() {
       },
       function(data) {
         $('#converted_result').text(data.result);
+        $('#calculated_list').empty();
         if (data.calculated) {
-          $('#calculated_list').append('<li>' + data.calculated + '</li>');
+          for (let calculation_idx in data.calculated) {
+            $('#calculated_list').append(
+              '<li>' + data.calculated[calculation_idx] + '</li>'
+            );
+          }
         }
       }
     );

@@ -14,8 +14,12 @@
 
 <h2>Calculating List</h2>
 <ol id="calculated_list">
-</ol>
 
+    {% for c in calculations %}
+        <li>{{c}}</li>
+    {% endfor %}
+
+</ol>
 
 <script type="text/javascript" src="{{ url_for('static', filename = 'script.js') }}"></script>
 {% endblock %}
